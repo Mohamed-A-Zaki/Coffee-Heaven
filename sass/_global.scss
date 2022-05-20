@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+*::selection {
+  background-color: $main-color;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $section-padding;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
