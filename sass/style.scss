@@ -72,7 +72,7 @@
 }
 
 .landing {
-  @include bg-image("../../img/home-bg.jpg");
+  @include bg-image("../img/home-bg.jpg");
   position: relative;
   z-index: 1;
   &::after {
