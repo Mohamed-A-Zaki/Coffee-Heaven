@@ -7,10 +7,9 @@
 .nav-bar {
   background-color: #fff;
   box-shadow: 2px 0px 2px 2px #eee;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-block: 0.8rem;
   position: sticky;
-  top: 0;
+  inset-block-start: 0;
   z-index: 1000;
   user-select: none;
   .container {
@@ -29,10 +28,8 @@
     background-color: #fff;
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
-    border-top: $main-border;
-    border-bottom: $main-border;
+    inset-inline: 0;
+    border-block: $main-border;
     transition: 0.2s linear;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     &.open {
@@ -89,6 +86,10 @@
       width: 500px;
       text-align: center;
       max-width: 100%;
+      margin-right: auto;
+      @media (max-width: 991px) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -229,8 +230,7 @@
 
 .footer {
   .content {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    padding-block: $section-padding;
     @include grid-4();
     border-bottom: $main-border;
     .item {
@@ -266,8 +266,8 @@
 
 .scroll-to-top {
   position: fixed;
-  bottom: 1rem;
-  right: -3rem;
+  inset-block-end: 1rem;
+  inset-inline-end: -3rem;
   background-color: $main-color;
   color: #fff;
   width: 40px;
@@ -284,6 +284,6 @@
     background: #333;
   }
   &.show {
-    right: 1rem;
+    inset-inline-end: 1rem;
   }
 }
